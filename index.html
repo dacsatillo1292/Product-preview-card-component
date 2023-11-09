@@ -10,32 +10,139 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     body{
-      background-color: rgb(235, 182, 136);
+      background-color: hsl(30, 38%, 92%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+height: 100vh;
     }
     main{
       display: flex;
       border-radius: 12px;
       background-color: white;
       overflow: hidden;
+      max-width: 38%;
+    margin: auto;
     }
     button{
-      padding: 20px;
-      background-color: lightgreen;
+      padding: 15px 10px;
+      background-color:hsl(158, 36%, 37%) ;
+      border-radius: 12px;
+      border: none;
+      width: 282px;
     }
     .button-text {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 700;
       color: white;
       margin-left: 8px;
     }
+h1{
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color:hsl(228, 12%, 48%) ;
+  letter-spacing: 8px;
+}
+.sale-price{
+  font-family: 'Fraunces', serif;
+  color:hsl(158, 36%, 37%) ;
+  font-size: 32px;
+}
+.left-section{
+  max-width: 50%;
+  max-height: 98%;
+}
+.right-section{
+  padding: 40px;
+  max-width: 30%;
+}
+.mobile-product-image{
+  display: none;
+}
+.product-image{
+  height: 110%;
+max-width: 100%;
+  overflow: hidden;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
+  color:hsl(228, 12%, 48%) ;
+  font-size: 16px;
+  width: 282px;
+}
+.price-container{
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.regular-price{
+  font-family: 'Montserrat', sans-serif;
+  color:hsl(228, 12%, 48%) ;
+  text-decoration: line-through;
+
+}
+
+@media (max-width: 375px) {
+  main{
+      display: flex;
+      flex-direction: column;
+      max-width: 95%;
+      border-radius: 12px;
+      background-color: white;
+      overflow: hidden;
+    margin: auto;
+    }
+    .left-section{
+  max-width: 100%;
+  max-height: 100%;
+}
+.right-section{
+  padding: 12px 24px 24px 24px;
+  max-width: 100%;
+}
+    .product-image{
+display: none;
+}
+.mobile-product-image{
+  display: inline;
+  max-width: 100%;
+}
+h1{
+  margin: 14px 0;
+}
+h2{
+  font-size: 14px;
+}
+p{
+  font-size: 14px;
+}
+.price-container{
+  margin: 14px 0;
+}
+.regular-price{
+  font-size: 14px;
+}
+}
+
   </style>
 </head>
 <body>
   <main>
-    <section class="left-section"><img src="./images/image-product-desktop.jpg" alt="fancy perfume"></section>
+    <section class="left-section">
+      <img class="mobile-product-image" src="./images/image-product-mobile.jpg" alt="small fancy perfume">
+      <img class="product-image" src="./images/image-product-desktop.jpg" alt="fancy perfume"></section>
     <section class="right-section">
       <h2>
         Perfume
@@ -45,7 +152,7 @@
   A floral, solar and voluptuous interpretation composed by Olivier Polge, 
   Perfumer-Creator for the House of CHANEL.
 </p>
- <div>
+ <div class="price-container">
   <span class="sale-price">
     $149.99
   </span>
